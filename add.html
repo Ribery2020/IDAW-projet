@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <title>tabletest</title>
+    <style>
+      body{ margin-top: 5em; }
+      .table {
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+    </style>
+  </head>
+
+<body>
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">food_id</th>
+        <th scope="col">user_id</th>
+        <th scope="col">shul</th>
+        <th scope="col">addtime</th>
+        <th scope="col">CRUD</th>
+      </tr>
+    </thead>
+  <tbody id="intégrer">
+  </tbody>
+  </table>
+
+  <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
+    <div class="form-group row">
+      <label for="inputid" class="col-sm-2 col-form-label">id</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputid" >
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputfood_id" class="col-sm-2 col-form-label">food_id</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="inputfood_id" >
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="inputuser_id" class="col-sm-2 col-form-label">user_id</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputuser_id" >
+</div>
+</div>
+  
+<div class="form-group row">
+  <label for="inputshul" class="col-sm-2 col-form-label">shul</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputshul" >
+</div>
+</div>
+
+<div class="form-group row">
+  <label for="inputaddtime" class="col-sm-2 col-form-label">addtime</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputaddtime" >
+</div>
+</div>
+
+  <div class="form-group row">
+    <span class="col-sm-2"></span>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary form-control">Submit</button>
+    </div>
+  </div>
+</form> 
+
+<script>
+  function onFormSubmit() {
+  event.preventDefault();
+  let id = $("#inputid").val();
+  let food_id = $("#inputfood_id").val();
+  let user_id = $("#inputuser_id").val();
+  let shul = $("#inputshul").val();
+  let addtime = $("#inputaddtime").val();
+
+  $("#intégrer").append(`<tr><td>${id}</td><td>${food_id}</td><td>${user_id}</td><td>${shul}</td><td>${addtime}</td><td></td><td></td></tr>`)
+  
+  }
+</script>
+</body>
+
+<body>
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">protein</th>
+        <th scope="col">lipid</th>
+        <th scope="col">sugar</th>
+        <th scope="col">salt</th>
+        <th scope="col">rel</th>
+        <th scope="col">zuc</th>
+
+        <th scope="col">CRUD</th>
+      </tr>
+    </thead>
+  <tbody id="proportion">
+  </tbody>
+  </table>
+
+  <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
+    <div class="form-group row">
+      <label for="inputid" class="col-sm-2 col-form-label">id</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputid" >
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputname" class="col-sm-2 col-form-label">name</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="inputname" >
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="inputprotein" class="col-sm-2 col-form-label">protein</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputprotein" >
+</div>
+</div>
+  
+<div class="form-group row">
+  <label for="inputlipid" class="col-sm-2 col-form-label">lipid</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputlipid" >
+</div>
+</div>
+
+<div class="form-group row">
+  <label for="inputsugar" class="col-sm-2 col-form-label">sugar</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputsugar" >
+</div>
+</div>
+<div class="form-group row">
+  <label for="inputsalt" class="col-sm-2 col-form-label">salt</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputsalt" >
+</div>
+</div>
+<div class="form-group row">
+  <label for="inputrel" class="col-sm-2 col-form-label">rel</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputrel" >
+</div>
+</div>
+<div class="form-group row">
+  <label for="inputzuc" class="col-sm-2 col-form-label">zuc</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputzuc" >
+</div>
+</div>
+  <div class="form-group row">
+    <span class="col-sm-2"></span>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary form-control">Submit</button>
+    </div>
+  </div>
+
+
+</form> 
+
+<script>
+  function onFormSubmit() {
+  event.preventDefault();
+  let id = $("#inputid").val();
+  let name = $("#inputname").val();
+  let protein = $("#inputprotein").val();
+  let lipid = $("#inputlipid").val();
+  let sugar = $("#inputsugar").val();
+  let salt = $("#inputsalt").val();
+  let rel = $("#inputrel").val();
+  let zuc = $("#inputzuc").val();
+
+  
+  $("#proportion").append(`<tr><td>${id}</td><td>${name}</td><td>${protein}</td><td>${lipid}</td><td>${sugar}</td><td>${salt}</td><td>${rel}</td><td>${zuc}</td></tr>`)
+  
+  }
+</script>
+</body>
+
+<body>
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">password</th>
+        <th scope="col">sex</th>
+        <th scope="col">age</th>
+        <th scope="col">movement</th>
+        <th scope="col">quantity</th>
+        <th scope="col">created_at</th>
+
+        <th scope="col">CRUD</th>
+      </tr>
+    </thead>
+  <tbody id="resources_admins">
+  </tbody>
+  </table>
+
+  <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
+    <div class="form-group row">
+      <label for="inputid" class="col-sm-2 col-form-label">id</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputid" >
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputname" class="col-sm-2 col-form-label">name</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="inputname" >
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="inputpassword" class="col-sm-2 col-form-label">password</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputpassword" >
+</div>
+</div>
+  
+<div class="form-group row">
+  <label for="inputsex" class="col-sm-2 col-form-label">sex</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputsex" >
+</div>
+</div>
+
+<div class="form-group row">
+  <label for="inputage" class="col-sm-2 col-form-label">age</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputage" >
+</div>
+</div>
+<div class="form-group row">
+  <label for="inputmovement" class="col-sm-2 col-form-label">movement</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputmovement" >
+</div>
+</div>
+<div class="form-group row">
+  <label for="inputquantity" class="col-sm-2 col-form-label">quantity</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputquantityl" >
+</div>
+</div>
+<div class="form-group row">
+  <label for="inputcreated_at" class="col-sm-2 col-form-label">created_at</label>
+  <div class="col-sm-3">
+    <input type="text" class="form-control" id="inputcreated_at" >
+</div>
+</div>
+
+
+  <div class="form-group row">
+    <span class="col-sm-2"></span>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary form-control">Submit</button>
+    </div>
+  </div>
+
+
+</form> 
+
+<script>
+  function onFormSubmit() {
+  event.preventDefault();
+  let id = $("#inputid").val();
+  let name = $("#inputname").val();
+  let password = $("#inputpassword").val();
+  let sex = $("#inputsex").val();
+  let age = $("#inputage").val();
+  let movement = $("#inputmovement").val();
+  let quantity = $("#inputquantity").val();
+  let created_at = $("#inputcreated_at").val();
+
+  
+  $("#resources_admins").append(`<tr><td>${id}</td><td>${name}</td><td>${password}</td><td>${sex}</td><td>${age}</td><td>${movement}</td><td>${quantity}</td><td>${created_at}</td></tr>`)
+  
+  }
+</script>
+</body>
+</html>
